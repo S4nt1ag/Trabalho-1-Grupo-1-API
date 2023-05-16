@@ -30,21 +30,21 @@ public class TelefoneService {
 		return telefoneRepository.save(telefone);
 	}
 
-	public String deleteTelefone(Integer id) {
+	public Boolean deleteTelefone(Integer id) {
 		Telefone telefoneDeleted = telefoneRepository.findById(id).orElse(null);
 		if (telefoneDeleted != null) {
 			telefoneRepository.deleteById(id);
 			telefoneDeleted = telefoneRepository.findById(id).orElse(null);
 			if (telefoneDeleted != null) {
-				return "Não deletado";
+				return false;
 			} 
 			else {
-				return "Deletado";
+				return true;
 			}
 
 		} 
 		else {
-			return "Não foi possível, id não existe";
+			return false;
 		}
 	}
 }
