@@ -1,0 +1,82 @@
+package com.grupoone.instrutor.entities;
+
+import java.util.Objects;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "turma")
+public class Turma {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_turma")
+	private Integer idTurma;
+
+	@Column(name = "nome_disciplina")
+	private String nomeDisciplina;
+
+	@Column(name = "dia_semana")
+	private String diaSemana;
+
+	@ManyToOne
+	@JoinColumn(name = "id_instrutor", referencedColumnName = "id_instrutor")
+	private Instrutor idInstrutor;
+
+	public Integer getIdTurma() {
+		return idTurma;
+	}
+
+	public void setIdTurma(Integer idTurma) {
+		this.idTurma = idTurma;
+	}
+
+	public String getNomeDisciplina() {
+		return nomeDisciplina;
+	}
+
+	public void setNomeDisciplina(String nomeDisciplina) {
+		this.nomeDisciplina = nomeDisciplina;
+	}
+
+	public String getDiaSemana() {
+		return diaSemana;
+	}
+
+	public void setDiaSemana(String diaSemana) {
+		this.diaSemana = diaSemana;
+	}
+
+	public Instrutor getIdInstrutor() {
+		return idInstrutor;
+	}
+
+	public void setIdInstrutor(Instrutor idInstrutor) {
+		this.idInstrutor = idInstrutor;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(idTurma);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Turma other = (Turma) obj;
+		return Objects.equals(idTurma, other.idTurma);
+	}
+
+}
