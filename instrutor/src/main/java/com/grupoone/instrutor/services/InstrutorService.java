@@ -31,19 +31,19 @@ public class InstrutorService {
 		return instrutorRepository.save(instrutor);
 	}
 
-	public String deleteInstrutor(Integer id) {
+	public Boolean deleteInstrutor(Integer id) {
 		Instrutor instrutorDeleted = instrutorRepository.findById(id).orElse(null);
 		if (instrutorDeleted != null) {
 			instrutorRepository.deleteById(id);
 			instrutorDeleted = instrutorRepository.findById(id).orElse(null);
 			if (instrutorDeleted != null) {
-				return "Não deletado";
+				return false;
 			} else {
-				return "Deletado";
+				return true;
 			}
 			
 		} else {
-			return "Não foi possível, id não existe";
+			return false;
 		}
 	}
 
