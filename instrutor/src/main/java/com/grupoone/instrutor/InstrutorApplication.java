@@ -8,6 +8,8 @@ public class InstrutorApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(InstrutorApplication.class, args);
+		
+		// TESTE DA MINHA BRANCH //
 	}
 
 }
