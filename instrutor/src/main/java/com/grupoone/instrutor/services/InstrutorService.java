@@ -11,6 +11,7 @@ import com.grupoone.instrutor.repositories.InstrutorRepository;
 @Service
 public class InstrutorService {
 
+
 	@Autowired
 	InstrutorRepository instrutorRepository;
 
@@ -45,4 +46,5 @@ public class InstrutorService {
 			return "Não foi possível, id não existe";
 		}
 	}
+
 }
