@@ -30,7 +30,7 @@ public class Instrutor {
 	@OneToMany(mappedBy = "idInstrutor")
 	private List<Turma> listaTurma;
 	
-	@OneToOne(mappedBy = "telefone")
+	@OneToOne(mappedBy = "idInstrutor")
 	private Telefone telefone; 
 	
 	public Integer getIdInstrutor() {

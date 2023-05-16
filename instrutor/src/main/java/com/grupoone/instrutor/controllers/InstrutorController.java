@@ -31,7 +31,7 @@ public class InstrutorController {
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Instrutor> getAlunoById(@PathVariable Integer id) {
+	public ResponseEntity<Instrutor> getInstrutorById(@PathVariable Integer id) {
 		Instrutor instrutorResponse = instrutorService.getInstrutorById(id);
 		if(null == instrutorResponse)
 			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
@@ -46,7 +46,7 @@ public class InstrutorController {
 	}
 	
 	@PutMapping
-	public ResponseEntity<Instrutor> updateAluno(@RequestBody Instrutor instrutor, Integer id) {
+	public ResponseEntity<Instrutor> updateInstrutor(@RequestBody Instrutor instrutor, Integer id) {
 		return new ResponseEntity<>(instrutorService.updateInstrutor(instrutor, id),
 				HttpStatus.OK);
 	}
