@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "c63b567f-36fc-4153-83a9-c9747cd7ec5d",
+		"name": "Trabalho 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20884477"
+	},
+	"item": [
+		{
+			"name": "Instrutor",
+			"item": [
+				{
+					"name": "Instrutores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/instrutores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"instrutores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instrutor By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/instrutores/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"instrutores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instrutor Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rg\" : 654, \r\n    \"nome\" : \"Joice Ptizer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/instrutores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"instrutores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instrutor Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idInstrutor\": 2,\r\n    \"rg\" : 658, \r\n    \"nome\" : \"Alexandre Pacheco\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/instrutores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"instrutores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instrutor Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/instrutores/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"instrutores",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Telefone",
+			"item": [
+				{
+					"name": "Telefones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/telefones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"telefones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Telefone By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/telefones/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"telefones",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Telefone Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": 8859,\r\n    \"idInstrutor\" : {\r\n        \"idInstrutor\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/telefones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"telefones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Telefone Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTelefone\": 4,\r\n    \"numero\" : 9112,\r\n    \"idInstrutor\" : {\r\n        \"idInstrutor\": 3\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/telefones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"telefones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Telefone Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/telefones/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"telefones",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Turma",
+			"item": [
+				{
+					"name": "Turmas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/turmas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"turmas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Turma By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/turmas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"turmas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Turma Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nomeDisciplina\": \"PostgreSQL\",\r\n    \"diaSemana\": \"Quinta-feira\",\r\n    \"idInstrutor\": {\r\n        \"idInstrutor\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/turmas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"turmas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Turma Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTurma\" : 1,\r\n    \"nomeDisciplina\" : \"APU Restful\",\r\n    \"diaSemana\" : \"Quarta-feira\",\r\n    \"idInstrutor\" {\r\n        \"idInstrutor\": 1\r\n    } \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/turmas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"turmas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Turma Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trabalho1/turmas/1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trabalho1",
+								"turmas",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
