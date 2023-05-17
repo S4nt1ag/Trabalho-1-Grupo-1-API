@@ -30,19 +30,19 @@ public class TurmaService {
 		return turmaRepository.save(turma);
 	}
 
-	public String deleteTurma(Integer id) {
+	public Boolean deleteTurma(Integer id) {
 		Turma turmaDeleted = turmaRepository.findById(id).orElse(null);
 		if (turmaDeleted != null) {
 			turmaRepository.deleteById(id);
 			turmaDeleted = turmaRepository.findById(id).orElse(null);
 			if (turmaDeleted != null) {
-				return "Não deletado";
+				return false;
 			} else {
-				return "Deletado";
+				return true;
 			}
 
 		} else {
-			return "Não foi possível, id não existe";
+			return false;
 		}
 	}
 
