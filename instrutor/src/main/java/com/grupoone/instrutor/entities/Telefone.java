@@ -28,7 +28,7 @@ public class Telefone {
 	@Column (name = "id_telefone")
 	private Integer idTelefone;
 	
-	@Column (name = "numero")
+	@Column (name = "numero", unique = true)
 	private Integer numero;
 	
 	@OneToOne
