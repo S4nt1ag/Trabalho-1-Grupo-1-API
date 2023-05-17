@@ -31,8 +31,8 @@ public class Telefone {
 	@Column (name = "numero", unique = true)
 	private Integer numero;
 	
-	@OneToOne
-	@JoinColumn(name = "id_instrutor", referencedColumnName = "id_instrutor")
+	@OneToOne //(1,1)
+	@JoinColumn(name = "id_instrutor", referencedColumnName = "id_instrutor") //FK--> Instrutor.
 	private Instrutor idInstrutor;
 
 	public Integer getIdTelefone() {

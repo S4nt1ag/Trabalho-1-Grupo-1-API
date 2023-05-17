@@ -33,10 +33,10 @@ public class Instrutor {
 	@Column(name = "nome")
 	private String nome;
 
-	@OneToMany(mappedBy = "idInstrutor")
+	@OneToMany(mappedBy = "idInstrutor")  // (1,N)
 	private List<Turma> listaTurma;
 	
-	@OneToOne(mappedBy = "idInstrutor")
+	@OneToOne(mappedBy = "idInstrutor") // (1,1)
 	private Telefone telefone; 
 	
 	public Integer getIdInstrutor() {
