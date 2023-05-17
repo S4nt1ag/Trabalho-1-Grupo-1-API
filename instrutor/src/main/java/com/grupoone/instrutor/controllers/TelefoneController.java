@@ -41,14 +41,26 @@ public class TelefoneController {
 	
 	@PostMapping
 	public ResponseEntity<Telefone> saveTelefone(@RequestBody Telefone telefone) {
-		return new ResponseEntity<>(telefoneService.saveTelefone(telefone),
-				HttpStatus.CREATED);
+		Telefone telefoneResponse = telefoneService.saveTelefone(telefone);
+		if(telefoneResponse == null) {
+			return new ResponseEntity<>(telefoneResponse, HttpStatus.NOT_MODIFIED);
+		}
+		else {
+			return new ResponseEntity<>(telefoneResponse,
+					HttpStatus.CREATED);
+		}
 	}
 	
 	@PutMapping
 	public ResponseEntity<Telefone> updateTelefone(@RequestBody Telefone telefone, Integer id) {
-		return new ResponseEntity<>(telefoneService.updateTelefone(telefone, id),
-				HttpStatus.OK);
+		Telefone telefoneResponse = telefoneService.updateTelefone(telefone, id);
+		if(telefoneResponse == null) {
+			return new ResponseEntity<>(telefoneResponse, HttpStatus.NOT_MODIFIED);
+		}
+		else {
+			return new ResponseEntity<>(telefoneResponse,
+					HttpStatus.OK);
+		}
 	}
 	
 	@DeleteMapping("/{id}")
