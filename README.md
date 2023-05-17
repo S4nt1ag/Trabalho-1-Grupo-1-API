@@ -28,4 +28,39 @@ Trabalho desenvolvido pelos etudantes da residencia em TIC software do serratec,
 
 ## Screnshots 
 
-(em construção)
+
+- Diagrama BD
+
+    <div align="center">
+      <img src="https://github.com/S4nt1ag/Trabalho-1-Grupo-1-API/assets/127254370/ef79ba8c-0af9-48d7-8ccb-0e31990d53ae" >
+  
+    </div>
+ 
+-  Tabela instrutor
+    <div align="center">
+  
+      <img src="https://github.com/S4nt1ag/Trabalho-1-Grupo-1-API/assets/127254370/7312cbd4-8e6c-4daf-a2b2-d8ce5e604ab3" >
+
+    </div>
+  
+- Tabela telefone
+    <div align="center">
+   
+  <img src="https://github.com/S4nt1ag/Trabalho-1-Grupo-1-API/assets/127254370/5c0a9be6-e3d5-4022-9594-67e59298e68d" >
+  
+    </div>
+  
+-  Tabela turma
+    <div align="center">
+    
+      <img src="https://github.com/S4nt1ag/Trabalho-1-Grupo-1-API/assets/127254370/1b4035ce-37ec-4c7e-870e-e0f4552139f0" >
+
+    </div>
+  
+-  Requisições 
+    <div align="center">
+    
+      <img src="https://github.com/S4nt1ag/Trabalho-1-Grupo-1-API/assets/127254370/49c29051-ae6d-451b-bd99-19ccf1d125cf" >
+    
+    </div>
+  

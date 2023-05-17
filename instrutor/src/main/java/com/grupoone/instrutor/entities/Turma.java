@@ -33,8 +33,8 @@ public class Turma {
 	@Column(name = "dia_semana")
 	private String diaSemana;
 
-	@ManyToOne
-	@JoinColumn(name = "id_instrutor", referencedColumnName = "id_instrutor")
+	@ManyToOne //(N,1)
+	@JoinColumn(name = "id_instrutor", referencedColumnName = "id_instrutor") //FK --> Instrutor.
 	private Instrutor idInstrutor;
 
 	public Integer getIdTurma() {
