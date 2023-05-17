@@ -27,7 +27,7 @@ public class Instrutor {
 	@Column(name = "id_instrutor")
 	private Integer idInstrutor;
 	
-	@Column(name = "rg")
+	@Column(name = "rg", unique = true)
 	private Integer rg;
 	
 	@Column(name = "nome")
