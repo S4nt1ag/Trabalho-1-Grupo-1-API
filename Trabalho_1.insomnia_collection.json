@@ -57,7 +57,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"rg\" : 654, \r\n    \"nome\" : \"Joice Ptizer\"\r\n}",
+							"raw": "{\r\n    \"rg\" : 785, \r\n    \"nome\" : \"Alexandre Paixão\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -160,7 +160,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/trabalho1/telefones/1",
+							"raw": "http://localhost:8080/trabalho1/telefones/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -169,7 +169,7 @@
 							"path": [
 								"trabalho1",
 								"telefones",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -182,7 +182,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"numero\": 8859,\r\n    \"idInstrutor\" : {\r\n        \"idInstrutor\": 1\r\n    }\r\n}",
+							"raw": "{\r\n    \"numero\": 9333,\r\n    \"idInstrutor\" : {\r\n        \"idInstrutor\": 3\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -211,7 +211,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idTelefone\": 4,\r\n    \"numero\" : 9112,\r\n    \"idInstrutor\" : {\r\n        \"idInstrutor\": 3\r\n    }\r\n}",
+							"raw": "\r\n{\r\n  \"idTelefone\": 3,\r\n  \"numero\": 8666,\r\n  \"idInstrutor\": {\r\n    \"idInstrutor\": 2,\r\n    \"rg\": 785,\r\n    \"nome\": \"Alexandre Paixão\",\r\n    \"listaTurma\": [\r\n      {\r\n        \"idTurma\": 1,\r\n        \"nomeDisciplina\": \"PostgreSQL\",\r\n        \"diaSemana\": \"Quinta-feira\",\r\n        \"idInstrutor\": 2\r\n      }\r\n    ],\r\n    \"telefone\": 3\r\n  }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -307,7 +307,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"nomeDisciplina\": \"PostgreSQL\",\r\n    \"diaSemana\": \"Quinta-feira\",\r\n    \"idInstrutor\": {\r\n        \"idInstrutor\": 2\r\n    }\r\n}",
+							"raw": "{\r\n\t\"nomeDisciplina\": \"API Restful\",\r\n    \"diaSemana\": \"Quinta-feira\",\r\n    \"idInstrutor\": {\r\n        \"idInstrutor\": 1\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -336,7 +336,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"idTurma\" : 1,\r\n    \"nomeDisciplina\" : \"APU Restful\",\r\n    \"diaSemana\" : \"Quarta-feira\",\r\n    \"idInstrutor\" {\r\n        \"idInstrutor\": 1\r\n    } \r\n}",
+							"raw": "{\r\n    \"idTurma\": 2,\r\n    \"nomeDisciplina\": \"API\",\r\n    \"diaSemana\": \"Quarta-Feira\",\r\n    \"idInstrutor\": {\r\n        \"idInstrutor\": 1,\r\n        \"rg\": 985,\r\n        \"nome\": \"Alexandre Pacheco\"\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
