@@ -23,11 +23,38 @@ public class TelefoneService {
 	}
 
 	public Telefone saveTelefone(Telefone telefone) {
-		return telefoneRepository.save(telefone);
+		Boolean instrutorLivre = true;
+		List<Telefone> listaTelefones = this.getAllTelefones();
+		
+		for(Telefone t : listaTelefones) {
+			if(t.getIdInstrutor().getIdInstrutor() == telefone.getIdInstrutor().getIdInstrutor()) {
+				instrutorLivre = false;
+			}	
+		}
+		if(instrutorLivre) {
+			return telefoneRepository.save(telefone);
+		}
+		else {
+			return null;
+		}
+		
 	}
 
 	public Telefone updateTelefone(Telefone telefone, Integer id) {
-		return telefoneRepository.save(telefone);
+		Boolean instrutorLivre = true;
+		List<Telefone> listaTelefones = this.getAllTelefones();
+		
+		for(Telefone t : listaTelefones) {
+			if(t.getIdInstrutor().getIdInstrutor() == telefone.getIdInstrutor().getIdInstrutor()) {
+				instrutorLivre = false;
+			}	
+		}
+		if(instrutorLivre) {
+			return telefoneRepository.save(telefone);
+		}
+		else {
+			return null;
+		}
 	}
 
 	public Boolean deleteTelefone(Integer id) {
