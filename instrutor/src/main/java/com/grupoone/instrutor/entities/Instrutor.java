@@ -3,6 +3,9 @@ package com.grupoone.instrutor.entities;
 import java.util.List;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,7 +14,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "idInstrutor"
+        ) 
 @Entity
 @Table(name = "instrutor")
 public class Instrutor {
@@ -21,7 +27,7 @@ public class Instrutor {
 	@Column(name = "id_instrutor")
 	private Integer idInstrutor;
 	
-	@Column(name = "rg")
+	@Column(name = "rg", unique = true)
 	private Integer rg;
 	
 	@Column(name = "nome")
